@@ -49,3 +49,61 @@ table {
 
 /*Global*/
 
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&family=Dhurjati&display=swap');
+
+:root {
+    --black: #0c0c0c;
+    --mainGray: #252525;
+    --maroon: #8c1d40;
+}
+
+body {
+    margin: auto;
+    height:100vh;
+    width:100vw;
+    overflow-x: hidden;
+    background-color: var(--mainGray);
+}
+
+nav{
+    background-color: var(--black);
+    display: flex;
+    font-family: 'Dhurjati', sans-serif;
+}
+
+nav #logo{
+    flex: 10%;
+}
+
+nav ul{
+    display: inline-flex;
+    flex: 40%;
+}
+
+nav li{
+    color: #ffffff;
+    font-size: 2.5em;
+    margin: auto 5% auto 5%;
+}
+
+nav a:hover{
+    -webkit-text-stroke: 2px var(--maroon);
+    -webkit-text-fill-color: #ffffff;
+}
+
+.selected{
+    -webkit-text-stroke: 2px var(--maroon);
+    -webkit-text-fill-color: #ffffff;
+}
+
+nav #tickets{
+    flex: 10%;
+    color: #ffffff;
+    font-size: 2.5em;
+    margin: auto;
+}
+
+#tickets p{
+    text-align: center;
+    background-color: var(--maroon);
+}

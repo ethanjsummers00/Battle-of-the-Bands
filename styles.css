@@ -73,7 +73,7 @@ nav{
 }
 
 nav #logo{
-    flex: 10%;
+    flex: 20%;
 }
 
 p{
@@ -95,13 +95,14 @@ footer{
 @media (min-width: 900px){
     nav ul{
         display: inline-flex;
-        flex: 40%;
+        flex: 45%;
     }
     
     nav li{
-        font-size: 2.5em;
+        font-size: 3em;
         margin: auto 5% auto 5%;
         vertical-align: middle;
+        padding-bottom: 0.2em;
     }
     
     nav a{
@@ -121,15 +122,24 @@ footer{
     }
     
     nav #tickets{
-        flex: 10%;
+        flex: 5%;
         color: #ffffff;
         font-size: 2.5em;
         margin: auto;
     }
+
+    nav #tickets:hover{
+        color: var(--gold);
+        cursor: pointer;
+    }
     
     #tickets p{
         text-align: center;
+        font-family: 'Dhurjati', sans-serif;
         background-color: var(--maroon);
+        padding-bottom: 0.2em;
+        max-width: 200px;
+        border-radius: 10px;
     }
 
     #logo{
@@ -142,7 +152,7 @@ footer{
 
     h1{
         font-family: 'Dhurjati', sans-serif;
-        font-size: 6.5em;
+        font-size: 6em;
         color: var(--gold);
         text-align: center;
         margin-top: 1%;
@@ -215,6 +225,7 @@ footer{
           "date1 bands1"; 
         grid-area: day1;
         margin-bottom: 2%;
+        margin-top: 2%;
       }
       .bands1 {
         justify-self: start; 
@@ -247,14 +258,15 @@ footer{
         grid-area: bands2; 
       }
 
-      #info{
+    #info{
         
         text-align: center;
       }
 
-      #info h3{
+    #info h3{
         font-family: 'Dhurjati', sans-serif;
-        font-size: 2.5em;
+        font-size: 3em;
+        margin: 0 auto 1% auto;
         color: var(--gold);
     }
 

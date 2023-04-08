@@ -80,6 +80,18 @@ p{
     font-family: 'Arimo', sans-serif;
 }
 
+hr{
+    max-width: 70%;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 2% auto 2% auto;
+}
+
+footer{
+    background-color: var(--black);
+    display: flex;
+}
+
 @media (min-width: 900px){
     nav ul{
         display: inline-flex;
@@ -119,6 +131,10 @@ p{
         text-align: center;
         background-color: var(--maroon);
     }
+
+    #logo{
+        margin-left: 1%;
+    }
     
     main{
         display: flex;
@@ -126,7 +142,7 @@ p{
 
     h1{
         font-family: 'Dhurjati', sans-serif;
-        font-size: 4.5em;
+        font-size: 6.5em;
         color: var(--gold);
         text-align: center;
         margin-top: 1%;
@@ -134,7 +150,7 @@ p{
 
     h2{
         font-family: 'Dhurjati', sans-serif;
-        font-size: 3.5em;
+        font-size: 5em;
         color: #ffffff;
         text-align: center;
     }
@@ -169,6 +185,8 @@ p{
 
     #lineUp{
         display: grid; 
+        margin: auto;
+        /* max-width: 1000px; */
         grid-template-columns: 1fr 1fr; 
         grid-template-rows: 1fr 1fr; 
         gap: 0px 0px; 
@@ -179,12 +197,12 @@ p{
 
     #lineUp h3{
         font-family: 'Dhurjati', sans-serif;
-        font-size: 2.5em;
+        font-size: 4em;
         color: var(--gold);
     }
 
     #lineUp p{
-        font-size: 1.5em;
+        font-size: 3em;
         color: #ffffff;
     }
 
@@ -194,22 +212,91 @@ p{
         grid-template-rows: 1fr; 
         gap: 0px 0px; 
         grid-template-areas: 
-        "date1 bands1"; 
+          "date1 bands1"; 
         grid-area: day1;
-        align-items: center; 
-    }
-    .bands1 { grid-area: bands1; }
-    .date1 { grid-area: date1; }
-    .day2 {
+        margin-bottom: 2%;
+      }
+      .bands1 {
+        justify-self: start; 
+        grid-area: bands1; 
+      }
+      .date1 {
+        justify-self: end; 
+        align-self: center;
+        grid-area: date1;
+        margin-right: 3%;
+      }
+      .day2 {
         display: grid; 
         grid-template-columns: 1fr 1fr; 
         grid-template-rows: 1fr; 
         gap: 0px 0px; 
         grid-template-areas: 
           "date2 bands2"; 
-        grid-area: day2; 
-        align-items: center;
+        grid-area: day2;
+        margin-bottom: 2%;
+      }
+      .date2 {
+        justify-self: end;
+        align-self: center;
+        grid-area: date2;
+        margin-right: 3%;
+      }
+      .bands2 {
+        justify-self: start; 
+        grid-area: bands2; 
+      }
+
+      #info{
+        
+        text-align: center;
+      }
+
+      #info h3{
+        font-family: 'Dhurjati', sans-serif;
+        font-size: 2.5em;
+        color: var(--gold);
     }
-    .date2 { grid-area: date2; }
-    .bands2 { grid-area: bands2; }
+
+    #info p{
+        margin: 1% auto 1% auto;
+        max-width: 500px;
+        font-family: 'Dhurjati', sans-serif;
+        font-size: 3em;
+        color: #ffffff;
+        background-image: url(img/vector1.png);
+        background-repeat: no-repeat;
+        background-position: center; 
+    }
+
+    small{
+        font-size: 1.25em;
+        font-family: 'Arimo', sans-serif;
+        color: #ffffff;
+    }
+
+    footer{
+        text-align: center;
+        padding: 10px 0 10px 0;
+    }
+
+    footer svg:hover{
+        cursor: pointer;
+        stroke: var(--gold);
+    }
+
+    #footerLeft{
+        flex: 33%;
+        margin: auto;
+    }
+
+    #footerMid{
+        flex: 33%;
+        margin: auto;
+    }
+
+    #footerRight{
+        flex: 33%;
+        margin: auto;
+    }
 }

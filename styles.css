@@ -72,9 +72,7 @@ nav{
     font-family: 'Dhurjati', sans-serif;
 }
 
-nav #logo{
-    flex: 20%;
-}
+
 
 p{
     font-family: 'Arimo', sans-serif;
@@ -90,12 +88,17 @@ hr{
 footer{
     background-color: var(--black);
     display: flex;
+    width: 100%;
+    position: absolute;
+    bottom: -1;
 }
 
 @media (min-width: 900px){
     nav ul{
         display: inline-flex;
-        flex: 45%;
+        justify-content: center;
+        margin: auto;
+        flex: 60%;
     }
     
     nav li{
@@ -103,6 +106,7 @@ footer{
         margin: auto 5% auto 5%;
         vertical-align: middle;
         padding-bottom: 0.2em;
+        
     }
     
     nav a{
@@ -122,10 +126,12 @@ footer{
     }
     
     nav #tickets{
-        flex: 5%;
+        flex: 20%;
+        display: inline-flex;
         color: #ffffff;
         font-size: 2.5em;
-        margin: auto;
+        margin: auto 1% auto auto;
+        justify-content: end;
     }
 
     nav #tickets:hover{
@@ -138,12 +144,22 @@ footer{
         font-family: 'Dhurjati', sans-serif;
         background-color: var(--maroon);
         padding-bottom: 0.2em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
         max-width: 200px;
         border-radius: 10px;
     }
 
+    nav #logo{
+        flex: 20%;
+    }
+
     #logo{
         margin-left: 1%;
+    }
+
+    #menuBtn{
+        display: none;
     }
     
     main{
@@ -170,7 +186,7 @@ footer{
     }
     
     #imgColumn{
-        flex: 10%;
+        flex: 15%;
         display: grid; 
         grid-template-columns: 1fr; 
         grid-template-rows: 1fr 1fr 1fr 1fr; 
@@ -182,10 +198,12 @@ footer{
         "img4"; 
         justify-items: center; 
         overflow-x: hidden;
+        max-height: 100%;
     }
     
     #imgColumn img{
         max-width: 200%;
+        height: 100%;
     }
     
     .img1 { grid-area: img1; }
@@ -297,6 +315,10 @@ footer{
         stroke: var(--gold);
     }
 
+    #footerTop{
+        display: none;
+    }
+
     #footerLeft{
         flex: 33%;
         margin: auto;
@@ -310,5 +332,143 @@ footer{
     #footerRight{
         flex: 33%;
         margin: auto;
+    }
+}
+
+@media (max-width: 900px){
+    nav ul{
+        display: none;
+    }
+    
+    nav a:hover{
+        -webkit-text-stroke: 2px var(--maroon);
+        -webkit-text-fill-color: #ffffff;
+    }
+    
+    .selected{
+        -webkit-text-stroke: 2px var(--maroon);
+        -webkit-text-fill-color: #ffffff;
+    }
+    
+    nav #tickets{
+        display: none;
+    }
+
+    #logo{
+        margin-left: 2%;
+        flex: 80%;
+    }
+
+    #menuBtn{
+        flex: 20%;
+        margin: auto 2% auto auto;
+        text-align: right;
+    }
+
+    main{
+        display: flex;
+    }
+
+    #imgColumn{
+        display: none;
+    }
+
+    #home{
+        flex: 100%;
+        margin: auto;
+    }
+
+    h1{
+        font-family: 'Dhurjati', sans-serif;
+        font-size: 3em;
+        color: var(--gold);
+        text-align: center;
+        margin-top: 1%;
+    }
+
+    h1 strong{
+        color: #ffffff;
+    }
+
+    h2{
+        display: none;
+    }
+
+    #sponsors h2{
+        display: block;
+        font-family: 'Dhurjati', sans-serif;
+        font-size: 3em;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    #lineUp{
+        margin: auto;
+        text-align: center;
+    }
+
+    #lineUp h3{
+        font-family: 'Dhurjati', sans-serif;
+        font-size: 3em;
+        color: var(--gold);
+    }
+
+    #lineUp p{
+        font-size: 2em;
+        color: #ffffff;
+    }
+
+    #info{
+        text-align: center;
+        margin: 5% 0 5% 0;
+    }
+
+    #info h3{
+        font-family: 'Dhurjati', sans-serif;
+        font-size: 2em;
+        margin: 0 auto 1% auto;
+        color: var(--gold);
+    }
+
+    #info p{
+        margin: 2% auto 2% auto;
+        max-width: 200px;
+        font-family: 'Dhurjati', sans-serif;
+        font-size: 2em;
+        color: #ffffff;
+        background-image: url(img/vector1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    footer{
+        display: block;
+        text-align: center;
+        padding: 10px 0 10px 0;
+    }
+
+    footer svg:hover{
+        cursor: pointer;
+        stroke: var(--gold);
+    }
+
+    #footerLeft{
+        flex: 50%;
+        margin: auto;
+    }
+
+    #footerMid{
+        display: none;
+    }
+
+    #footerRight{
+        flex: 50%;
+        margin: auto;
+    }
+
+    small{
+        font-size: 1em;
+        font-family: 'Arimo', sans-serif;
+        color: #ffffff;
     }
 }

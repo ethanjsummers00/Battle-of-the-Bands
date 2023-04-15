@@ -294,9 +294,13 @@ footer{
         font-family: 'Dhurjati', sans-serif;
         font-size: 3em;
         color: #ffffff;
+    }
+    #info #location{
+        margin: 1% auto 1% auto;
         background-image: url(img/vector1.png);
         background-repeat: no-repeat;
         background-position: center; 
+        width: 800px;
     }
 
     small{
@@ -308,11 +312,19 @@ footer{
     footer{
         text-align: center;
         padding: 10px 0 10px 0;
+        position: absolute;
+        bottom: -1;
+    }
+
+    footer svg{
+        padding: 0 1% 0 1%;
+        
     }
 
     footer svg:hover{
         cursor: pointer;
         stroke: var(--gold);
+        fill: var(--gold);
     }
 
     #footerTop{
@@ -332,6 +344,45 @@ footer{
     #footerRight{
         flex: 33%;
         margin: auto;
+    }
+
+    #featured{
+        margin: 0 auto ;
+    }
+
+    #artists{
+        display: flex;
+        align-items: center;
+        margin: 2em auto;
+        overflow: hidden;
+        position: relative;
+        width: 300px;
+    }
+
+    #artists button{
+        border: 0;
+        border-radius: 50%;
+        color: #ffffff;
+        cursor: pointer;
+        font-size: 1em;
+        opacity: 0.25;
+        transition: opacity 0.25s;
+        position: absolute;
+        z-index: 1;
+    }
+    
+    #artistImages{
+        display: flex;
+        transform: translateX(0);
+        transition: transform 0.25s;
+    }
+
+    .previous{
+        left: 5px;
+    }
+
+    .next{
+        right: 5px;
     }
 }
 
@@ -384,6 +435,7 @@ footer{
         color: var(--gold);
         text-align: center;
         margin-top: 1%;
+        line-height: 0.75em;
     }
 
     h1 strong{
@@ -432,24 +484,38 @@ footer{
 
     #info p{
         margin: 2% auto 2% auto;
-        max-width: 200px;
+        max-width: 250px;
         font-family: 'Dhurjati', sans-serif;
         font-size: 2em;
         color: #ffffff;
+    }
+
+    #info #location{
+        margin: 1% auto 1% auto;
         background-image: url(img/vector1.png);
         background-repeat: no-repeat;
         background-position: center;
+        max-width: 80%;
     }
 
     footer{
         display: block;
         text-align: center;
         padding: 10px 0 10px 0;
+        position: absolute;
+        bottom: 0;
+    }
+
+    footer svg{
+        width: 2.25em;
+        height: 2.25em;
+        padding: 1%;
     }
 
     footer svg:hover{
         cursor: pointer;
         stroke: var(--gold);
+        fill: var(--gold);
     }
 
     #footerLeft{

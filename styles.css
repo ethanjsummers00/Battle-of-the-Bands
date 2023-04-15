@@ -356,7 +356,7 @@ footer{
         margin: 2em auto;
         overflow: hidden;
         position: relative;
-        width: 300px;
+        min-width: 1200px;
     }
 
     #artists button{
@@ -382,7 +382,7 @@ footer{
     }
 
     .next{
-        right: 5px;
+        right: 5px-0 6;
     }
 }
 

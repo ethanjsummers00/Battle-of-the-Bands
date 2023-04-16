@@ -164,6 +164,7 @@ footer{
     
     main{
         display: flex;
+        height: 100%;
     }
 
     h1{
@@ -298,6 +299,7 @@ footer{
     #info #location{
         margin: 1% auto 1% auto;
         background-image: url(img/vector1.png);
+        background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center; 
         width: 800px;
@@ -377,12 +379,93 @@ footer{
         transition: transform 0.25s;
     }
 
+    #find{
+        display: block;
+        max-height: 750px;
+    }
+
+    #find h1{
+        margin-bottom: 2%;
+    }
+
     .previous{
         left: 5px;
     }
 
     .next{
-        right: 5px-0 6;
+        right: 5px;
+    }
+
+    .links {
+        display: grid;
+        margin: auto;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr; 
+        grid-template-rows: 1fr 1fr; 
+        gap: 15% 0%; 
+        grid-template-areas: 
+          "facebook twitter"
+          "instagram tiktok"; 
+        max-width: 1200px;
+    }
+
+    .links div{
+        background-color: var(--maroon);
+        color: #ffffff;
+        min-height: 100px;
+        min-width: 400px;
+        max-width: 500px;
+        margin: auto;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .links div:hover{
+        color: var(--gold);
+    }
+
+    .facebook { grid-area: facebook; display: flex;}
+    .twitter { grid-area: twitter; display: flex; }
+    .instagram { grid-area: instagram; display: flex; }
+    .tiktok { grid-area: tiktok; display: flex; }
+
+    .links svg{
+        flex: 25%;
+        margin: auto;
+        height: 4em;
+        width: 4em;
+    }
+
+    .links h3{
+        flex: 75%;
+        margin: auto;
+        font-family: 'Arimo', sans-serif;
+        font-style: italic;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    #contacts{
+        display: block;
+        margin-top: 5%;
+    }
+
+    #contacts h2{
+        color: var(--gold);
+    }
+
+    #contacts p{
+        text-align: center;
+        color: #ffffff;
+        font-size: 2em;
+        margin: 2%;
+    }
+
+    #telEmail{
+        background-image: url(img/vector1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 80% auto;
     }
 }
 
@@ -418,6 +501,7 @@ footer{
 
     main{
         display: flex;
+        height: 100%;
     }
 
     #imgColumn{
@@ -502,8 +586,8 @@ footer{
         display: block;
         text-align: center;
         padding: 10px 0 10px 0;
-        position: absolute;
-        bottom: 0;
+        position: sticky;
+        /* bottom: 0; */
     }
 
     footer svg{
@@ -536,5 +620,80 @@ footer{
         font-size: 1em;
         font-family: 'Arimo', sans-serif;
         color: #ffffff;
+    }
+
+    #find{
+        display: block;
+        height: 100%;
+    }
+
+    .links {
+        display: block;
+        margin: auto;
+        justify-content: center;
+        max-width: 1200px;
+    }
+
+    .links div{
+        background-color: var(--maroon);
+        color: #ffffff;
+        min-height: 75px;
+        min-width: 200px;
+        max-width: 300px;
+        margin: 5% auto 5% auto;
+        border-radius: 10px;
+        
+    }
+
+    .links div:hover{
+        color: var(--gold);
+    }
+
+    .facebook { grid-area: facebook; display: flex;}
+    .twitter { grid-area: twitter; display: flex; }
+    .instagram { grid-area: instagram; display: flex; }
+    .tiktok { grid-area: tiktok; display: flex; }
+
+    .links svg{
+        flex: 25%;
+        margin: auto;
+        height: 3em;
+        width: 3em;
+    }
+
+    .links h3{
+        flex: 75%;
+        margin: auto;
+        font-family: 'Arimo', sans-serif;
+        font-style: italic;
+        font-size: 2em;
+        text-align: center;
+    }
+
+    #contacts{
+        display: block;
+        margin-top: 5%;
+    }
+
+    #contacts h2{
+        display: block;
+        font-family: 'Dhurjati', sans-serif;
+        font-size: 3em;
+        color: var(--gold);
+        text-align: center;
+    }
+
+    #contacts p{
+        text-align: center;
+        color: #ffffff;
+        font-size: 2em;
+        margin: 2%;
+    }
+
+    #telEmail{
+        background-image: url(img/vector1.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% auto;
     }
 }

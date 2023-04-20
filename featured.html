@@ -7,7 +7,7 @@
         <meta name="description" content="Ethan Summers' Website">
         <link href="styles.css" rel="stylesheet" >
         <link href='https://fonts.googleapis.com/css?family=Dhurjati' rel='stylesheet'>
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
         <header>
@@ -37,16 +37,60 @@
             <section id="featured">
                 <h1>Featured Artists</h1>
                 <section id="artists">
-                    <button class="previous"><</button>
-                    <button class="next">></button>
-                    <div id="artistImages">
-                        <img src="img/artist1.png">
-                        <img src="img/artist2.png">
-                        <img src="img/artist3.png">
+                    <div id="artistLeft">
+                        <img src="img/artist1.png" style="opacity: 50%;">
+                    </div>
+                    <div id="artistImages" class=".slideContainer">
+                        <div class="slide">
+                            <img src="img/artist2.png">
+                        </div>
+                        <div class="slide">
+                            <img src="img/artist1.png">
+                        </div>
+                        <div class="slide">
+                            <img src="img/artist3.png">
+                        </div>
+                    </div>
+                    <div id="artistRight">
+                        <img src="img/artist3.png" style="opacity: 50%;">
                     </div>
                 </section>
-                <article id="artistDesc">
-                    <h2>Killing Sand</h2>
+                <div id="artistMobile">
+                    <div class="mobile">
+                        <img src="img/artist1.png" width="300px">
+                    </div>
+                    <article class="mobileDesc">
+                        <h2> <em><</em> Killing Sand <em>></em> </h2>
+                        <p>Killing Sand is a Queen Creek band started by 3 guys
+                            from a chess club. After discovering a shared love for psychedelic
+                            rock they went on to form Killing Sand. They have their debut album
+                            releasing in August. </p>
+                    </article>
+
+                    <div class="mobile">
+                        <img src="img/artist2.png" width="300px">
+                    </div>
+                    <article class="mobileDesc">
+                        <h2> <em><</em> 12 Seconds <em>></em> </h2>
+                        <p>Killing Sand is a Queen Creek band started by 3 guys
+                            from a chess club. After discovering a shared love for psychedelic
+                            rock they went on to form Killing Sand. They have their debut album
+                            releasing in August. </p>
+                    </article>
+
+                    <div class="mobile">
+                        <img src="img/artist3.png" width="300px">
+                    </div>
+                    <article class="mobileDesc">
+                        <h2> <em><</em> The Faces <em>></em> </h2>
+                        <p>Killing Sand is a Queen Creek band started by 3 guys
+                            from a chess club. After discovering a shared love for psychedelic
+                            rock they went on to form Killing Sand. They have their debut album
+                            releasing in August. </p>
+                    </article>
+                </div>
+                <article class="artistDesc">
+                    <h2> <em onclick="moveSlides(-1)"><</em> Killing Sand <em onclick="moveSlides(1)">></em> </h2>
                     <p>Killing Sand is a Queen Creek band started by 3 guys
                         from a chess club. After discovering a shared love for psychedelic
                         rock they went on to form Killing Sand. They have their debut album

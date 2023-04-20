@@ -58,6 +58,12 @@ table {
     --gold: #FFBF5F;
 }
 
+html, body{
+    height: fit-content;
+    width: fit-content;
+    overflow-x: hidden;
+}
+
 body {
     margin: auto;
     height:100vh;
@@ -90,10 +96,15 @@ footer{
     display: flex;
     width: 100%;
     position: absolute;
-    bottom: -1;
+    bottom: 0;
 }
 
+svg:hover {
+    fill: red;
+  }
+
 @media (min-width: 900px){
+
     nav ul{
         display: inline-flex;
         justify-content: center;
@@ -161,10 +172,11 @@ footer{
     #menuBtn{
         display: none;
     }
-    
+
     main{
         display: flex;
         height: 100%;
+        padding-bottom: 5rem;
     }
 
     h1{
@@ -190,16 +202,17 @@ footer{
         flex: 15%;
         display: grid; 
         grid-template-columns: 1fr; 
-        grid-template-rows: 1fr 1fr 1fr 1fr; 
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
         gap: 0px 0px; 
         grid-template-areas: 
         "img1"
         "img2"
         "img3"
-        "img4"; 
+        "img4"
+        "img5"; 
         justify-items: center; 
         overflow-x: hidden;
-        max-height: 100%;
+        height: 145vh;
     }
     
     #imgColumn img{
@@ -264,6 +277,7 @@ footer{
         grid-template-areas: 
           "date2 bands2"; 
         grid-area: day2;
+        margin-top: 2%;
         margin-bottom: 2%;
       }
       .date2 {
@@ -315,7 +329,7 @@ footer{
         text-align: center;
         padding: 10px 0 10px 0;
         position: absolute;
-        bottom: -1;
+        bottom: 0;
     }
 
     footer svg{
@@ -327,6 +341,21 @@ footer{
         cursor: pointer;
         stroke: var(--gold);
         fill: var(--gold);
+    }
+
+    #sponsors{
+        padding-bottom: 5em;
+    }
+
+    #sponOne, #sponTwo{
+        display: flex;
+        margin: auto;
+        justify-content: center;
+        align-content: center;
+    }
+
+    #sponOne img{
+        margin: 2%;
     }
 
     #footerTop{
@@ -355,28 +384,116 @@ footer{
     #artists{
         display: flex;
         align-items: center;
+        justify-content: center;
         margin: 2em auto;
         overflow: hidden;
         position: relative;
         min-width: 1200px;
     }
 
-    #artists button{
-        border: 0;
-        border-radius: 50%;
-        color: #ffffff;
-        cursor: pointer;
-        font-size: 1em;
-        opacity: 0.25;
-        transition: opacity 0.25s;
-        position: absolute;
-        z-index: 1;
+    #artistLeft img, #artistRight img{
+        height: 340px;
     }
     
-    #artistImages{
-        display: flex;
-        transform: translateX(0);
-        transition: transform 0.25s;
+    .artistDesc h2{
+        -webkit-text-stroke: 3px var(--maroon);
+        user-select: none;
+        
+    }
+
+    .artistDesc h2 em{
+        font-family: 'Arimo', sans-serif;
+        -webkit-text-stroke: 0px var(--maroon);
+        user-select: none;
+    }
+
+    .artistDesc h2 em:hover{
+        color: var(--gold);
+        cursor: pointer;
+    }
+
+    .artistDesc p{
+        text-align: center;
+        margin: auto;
+        color: #ffffff;
+        font-size: 2em;
+        max-width: 1000px;
+    }
+
+    .slideContainer {
+        flex: 100%;
+        /* position: relative; */
+        margin: auto;
+        background-color: var(--linkGray);
+        height: 801px;
+    }
+
+    .slide{
+        display: inline-block;
+        height: 100%;
+    }
+
+    .slide img{
+        vertical-align: middle;
+        text-align: center;
+        height: 500px;
+    }
+
+    .next {
+        right: 0;
+    }
+    
+    /* Next and previous icon design */
+    .previous,
+    .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        padding: 10px;
+        margin-top: -25px;
+        font-size: 2em;
+    }
+    
+    /* caption decorate */
+    .captionText {
+        color: #000000;
+        font-size: 14px;
+        position: absolute;
+        padding: 12px 12px;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .fa {
+        font-size: 32px;
+        color: var(--linkGray);
+    }
+    
+    .fa:hover {
+        transition: 0.5s;
+        color: var(--hoverGray);
+    }
+    
+    .footerdot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbbbbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.5s ease;
+    }
+    
+    .active,
+    .footerdot:hover {
+        background-color: black;
+    }
+
+    #artistMobile{
+        display: none;
     }
 
     #find{
@@ -470,7 +587,7 @@ footer{
 }
 
 @media (max-width: 900px){
-    nav ul{
+    #mainMenu {
         display: none;
     }
     
@@ -487,7 +604,6 @@ footer{
     nav #tickets{
         display: none;
     }
-
     #logo{
         margin-left: 2%;
         flex: 80%;
@@ -497,6 +613,10 @@ footer{
         flex: 20%;
         margin: auto 2% auto auto;
         text-align: right;
+    }
+
+    nav ul{
+        display: none;
     }
 
     main{
@@ -510,15 +630,16 @@ footer{
 
     #home{
         flex: 100%;
-        margin: auto;
+        margin: 0 auto 0 auto;
     }
 
     h1{
         font-family: 'Dhurjati', sans-serif;
-        font-size: 3em;
+        font-size: 3.5em;
         color: var(--gold);
         text-align: center;
         margin-top: 1%;
+        margin-bottom: 5%;
         line-height: 0.75em;
     }
 
@@ -536,6 +657,7 @@ footer{
         font-size: 3em;
         color: #ffffff;
         text-align: center;
+        
     }
 
     #lineUp{
@@ -582,12 +704,23 @@ footer{
         max-width: 80%;
     }
 
+    #sponOne, #sponTwo{
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    #sponOne img, #sponTwo img{
+        margin: 2%;
+        max-width: 200px;
+    }
+
     footer{
         display: block;
         text-align: center;
         padding: 10px 0 10px 0;
-        position: sticky;
-        /* bottom: 0; */
+        position: absolute;
+        bottom: 0;
     }
 
     footer svg{
@@ -624,7 +757,53 @@ footer{
 
     #find{
         display: block;
-        height: 100%;
+        max-height: 80vh;
+    }
+
+    #featured{
+        margin: 0 auto ;
+        max-width: 350px;
+    }
+
+    #artists{
+        display: none;
+    }
+
+    .mobileDesc h2{
+        display: block;
+        display: block;
+        font-family: 'Dhurjati', sans-serif;
+        font-size: 3.5em;
+        color: #ffffff;
+        text-align: center;
+        -webkit-text-stroke: 2px var(--maroon);
+    }
+
+    .mobileDesc h2 em{
+        display: none;
+    }
+
+    .mobileDesc p{
+        text-align: center;
+        margin: auto;
+        color: #ffffff;
+        font-size: 1.5em;
+        padding-bottom: 10%;
+    }
+
+    #artistMobile{
+        overflow-x: hidden;
+    }
+
+    .mobile{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .mobile > img{
+        margin: auto;
+        text-align: center;
+        filter: drop-shadow(10px 10px 4px var(--black));
     }
 
     .links {
@@ -686,7 +865,7 @@ footer{
     #contacts p{
         text-align: center;
         color: #ffffff;
-        font-size: 2em;
+        font-size: 1.4em;
         margin: 2%;
     }
 

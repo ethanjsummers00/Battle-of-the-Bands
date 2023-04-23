@@ -86,3 +86,18 @@ var slideIndex = 1;
             artistDesc.innerHTML ="12 Seconds is a hard rock band with artists who all were born and raised here in Mesa. After being launched to local stardom appearing Arizona 12 news..."
         }
     }
+
+    
+
+    
+
+    (function () {
+        $('.hamburger-menu').on('click', function() {
+            // $('.bar').toggleClass('animate');
+        var mobileNav = $('.mobile-nav');
+        mobileNav.toggleClass('hide show');
+        
+        })
+    })();
+
+    

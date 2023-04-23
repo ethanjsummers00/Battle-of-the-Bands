@@ -8,6 +8,8 @@
         <link href="styles.css" rel="stylesheet" >
         <link href='https://fonts.googleapis.com/css?family=Dhurjati' rel='stylesheet'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+        <script src="scripts.js"></script>
     </head>
     <body>
         <header>
@@ -23,12 +25,24 @@
                 <div id="tickets">
                     <p>Get Tickets</p>
                 </div>
-                <svg id="menuBtn" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M4 6l16 0"></path>
-                    <path d="M4 12l16 0"></path>
-                    <path d="M4 18l16 0"></path>
-                </svg>
+                <div class="mobile">
+                    <div class="hamburger-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <line x1="4" y1="6" x2="20" y2="6" />
+                            <line x1="4" y1="12" x2="20" y2="12" />
+                            <line x1="4" y1="18" x2="20" y2="18" />
+                        </svg>
+                    </div>
+                </div>  
+                
+                <div class="mobile-nav hide">
+                    <ul>
+                    <li><a href="index.html" class="selected">About</a></li>
+                    <li><a href="featured.html">Featured</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
 
         </header>
@@ -38,7 +52,7 @@
                 <img class="img2" src="img/2.jpg" alt="image of main stage by Yvette de Wit">
                 <img class="img3" src="img/3.jpg" alt="image of finishing perfomance by Spencer Davis">
                 <img class="img4" src="img/4.jpg" alt="image of band perdforming on stage by Matthew Kalapuch">
-                <img class="img5" src="img/1.jpg">
+                <img class="img5" src="img/5.jpg">
             </aside>
             <section id="home">
                 <h1>Battle of the Bands <strong>2023</strong></h1>
@@ -78,7 +92,33 @@
                         <img src="img/rock.png">
                     </div>
                 </section>
+                <div id="dialog" >
+                    <form>
+                        <h1>RSVP</h1>
+                        <div>
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName">
+                        </div>
+                        <div>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" >
+                        </div>
+                        <div>
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password" >
+                        </div>
+                        <div>
+                            <label for="passwordConfirm">Confirm Password</label>
+                            <input type="password" id="passwordConfirm" name="passwordConfirm" >
+                        </div>
+                        <div id="formErrors"></div>
+                        <div>
+                            <input type="submit" id="submit" value="Register">
+                        </div>
+                    </form>
+                </div>
             </section>
+            
         </main>
         <footer>
             <section id="footerTop">
@@ -170,12 +210,20 @@
         </footer>
     </body>
     <script>
-        function openNav() {
-          document.getElementById("mySidenav").style.width = "100%";
-        }
-        
-        function closeNav() {
-          document.getElementById("mySidenav").style.width = "0";
-        }
-        </script>
+        (function () {
+            $('.hamburger-menu').on('click', function() {
+                $('.bar').toggleClass('animate');
+            var mobileNav = $('.mobile-nav');
+            var svg = $('.hamburger-menu svg')
+            mobileNav.toggleClass('hide show');
+            })
+        })();
+
+        $(function() {
+            $('#tickets').on('click', function() {
+                $( "#dialog" ).dialog();
+                $( "#dialog" ).css("display", "block")
+            })
+        });
+    </script>
 </html>

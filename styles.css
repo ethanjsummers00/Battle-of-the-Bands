@@ -58,6 +58,11 @@ table {
     --gold: #FFBF5F;
 }
 
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 html, body{
     height: fit-content;
     width: fit-content;
@@ -78,7 +83,9 @@ nav{
     font-family: 'Dhurjati', sans-serif;
 }
 
-
+main{
+    animation: fadeIn 1s;
+}
 
 p{
     font-family: 'Arimo', sans-serif;
@@ -95,15 +102,83 @@ footer{
     background-color: var(--black);
     display: flex;
     width: 100%;
+    text-align: center;
+    padding: 10px 0 10px 0;
     position: absolute;
     bottom: 0;
 }
 
-svg:hover {
-    fill: red;
-  }
+.ui-dialog{
+    background-color: var(--black);
+    width: 100%;
+}
+
+#dialog{
+    background-color: var(--black);
+    border-radius: 10px;
+    display: none;
+    position: absolute;
+}
+
+#dialog h1{
+    font-size: 4em;
+}
+
+form {
+    font: 14px Arial;
+    background-color: var(--black);
+    padding: 10px;
+    width: 400px;
+    border-radius: 10px;
+    color: #ffffff;
+}
+
+/* .hide {
+    display: none;
+ } */
+
+#formErrors {
+    color: red;
+}
+
+input[type=text], input[type=email], input[type=password] {
+    width: 400px;
+    padding: 8px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    box-sizing: border-box;
+ }
+ 
+ input[type=text]:focus {
+    background-color: lightblue;
+ }
+ 
+ input[type=submit] {
+    width: 100%;
+    color: white;
+    background-color: #09f;
+    padding: 15px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #07d;
+}
+
+input.error  {
+    border: 2px solid red;
+}
 
 @media (min-width: 900px){
+
+    .mobile, .mobile-nav{
+        display: none;
+    }
 
     nav ul{
         display: inline-flex;
@@ -129,6 +204,7 @@ svg:hover {
     nav a:hover{
         -webkit-text-stroke: 2px var(--maroon);
         -webkit-text-fill-color: #ffffff;
+        transition: 0.5s;
     }
     
     .selected{
@@ -148,6 +224,7 @@ svg:hover {
     nav #tickets:hover{
         color: var(--gold);
         cursor: pointer;
+        transition: 0.5s;
     }
     
     #tickets p{
@@ -325,22 +402,15 @@ svg:hover {
         color: #ffffff;
     }
 
-    footer{
-        text-align: center;
-        padding: 10px 0 10px 0;
-        position: absolute;
-        bottom: 0;
-    }
-
     footer svg{
         padding: 0 1% 0 1%;
-        
     }
 
     footer svg:hover{
         cursor: pointer;
         stroke: var(--gold);
         fill: var(--gold);
+        transform: 0.5s;
     }
 
     #sponsors{
@@ -379,6 +449,7 @@ svg:hover {
 
     #featured{
         margin: 0 auto ;
+        
     }
 
     #artists{
@@ -389,6 +460,10 @@ svg:hover {
         overflow: hidden;
         position: relative;
         min-width: 1200px;
+    }
+
+    .artistDesc{
+        padding-bottom: 5em;
     }
 
     #artistLeft img, #artistRight img{
@@ -437,6 +512,7 @@ svg:hover {
         vertical-align: middle;
         text-align: center;
         height: 500px;
+        animation: fadeIn 1s;
     }
 
     .next {
@@ -539,6 +615,7 @@ svg:hover {
 
     .links div:hover{
         color: var(--gold);
+        transition: 0.5s;
     }
 
     .facebook { grid-area: facebook; display: flex;}
@@ -587,7 +664,12 @@ svg:hover {
 }
 
 @media (max-width: 900px){
-    #mainMenu {
+    body{
+        overflow:hidden;
+        height: 100%;
+    }
+
+    #mainMenu, ul {
         display: none;
     }
     
@@ -615,13 +697,70 @@ svg:hover {
         text-align: right;
     }
 
-    nav ul{
+    /* nav ul{
         display: none;
+    } */
+
+    .hamburger-menu{
+        cursor: pointer;
+        margin: auto 5% auto auto;
+        z-index:2;
     }
+
+    .show {
+        left:0%;
+        opacity:1;
+      }
+      
+      .hide {
+        opacity:0;
+        left:100%;
+      }
+      
+      .mobile-nav {
+        background:var(--mainGray);
+        position:absolute;
+        top:0;
+        width:100vw;
+        height:100vh;
+        text-align:center;
+        transition: .2s ease;
+        /*  transition: opacity .5s ease;
+        -moz-transition: opacity .5s ease;
+        -webkit-transition: opacity .5s ease;
+        transition:left .5s ease-in-out;*/
+      }
+      .mobile-nav ul{
+        position:absolute;
+        top:40%;
+        transform: translateY(-50%);
+        list-style:none;
+      }
+      
+      .mobile-nav a {
+        text-align:center;
+        font-size:4.5em;
+        color:#ffffff;
+        opacity:0;
+        transition:opacity .9s ease-in-out;
+        text-decoration: none;
+      }
+      
+      .mobile-nav.show a {
+        text-align:center;
+        font-size:4.5em;
+        color:#ffffff;
+        opacity:1;
+      }
+      
+      .mobile-nav a:hover {
+        color:#2980b9;
+      }
 
     main{
         display: flex;
         height: 100%;
+        flex: 1 1 auto;
     }
 
     #imgColumn{
@@ -649,6 +788,10 @@ svg:hover {
 
     h2{
         display: none;
+    }
+
+    #sponsors{
+        
     }
 
     #sponsors h2{
@@ -719,8 +862,9 @@ svg:hover {
         display: block;
         text-align: center;
         padding: 10px 0 10px 0;
-        position: absolute;
+        position: relative;
         bottom: 0;
+        
     }
 
     footer svg{
@@ -874,5 +1018,6 @@ svg:hover {
         background-repeat: no-repeat;
         background-position: center;
         background-size: 100% auto;
+        margin-bottom: 10%;
     }
 }

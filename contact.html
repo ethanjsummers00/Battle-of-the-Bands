@@ -13,7 +13,7 @@
         <header>
             <nav>
                 <div id="logo">
-                    <img src="img/botbLogo1.png" alt="Battle of the Bands logo" height="125px">
+                    <img src="img/botbLogo1.png" alt="Battle of the Bands logo" height="125">
                 </div>
                 <ul id="mainMenu">
                     <li><a href="index.html">About</a></li>
@@ -42,7 +42,6 @@
                     <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-            </nav>
             </nav>
         </header>
         <main id="find">
@@ -192,15 +191,15 @@
                 <small>Battle of the Bands - Copyright 2023</small>
             </section>
         </footer>
+        <script>
+            (function () {
+                $('.hamburger-menu').on('click', function() {
+                    $('.bar').toggleClass('animate');
+                var mobileNav = $('.mobile-nav');
+                var svg = $('.hamburger-menu svg')
+                mobileNav.toggleClass('hide show');
+                })
+            })();
+        </script>
     </body>
-    <script>
-        (function () {
-            $('.hamburger-menu').on('click', function() {
-                $('.bar').toggleClass('animate');
-            var mobileNav = $('.mobile-nav');
-            var svg = $('.hamburger-menu svg')
-            mobileNav.toggleClass('hide show');
-            })
-        })();
-    </script>
 </html>

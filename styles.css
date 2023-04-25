@@ -466,6 +466,7 @@ input.error  {
 
     #artistLeft img, #artistRight img{
         height: 340px;
+        opacity: 50%;
     }
     
     .artistDesc h2{

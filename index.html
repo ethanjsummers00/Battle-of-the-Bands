@@ -15,7 +15,7 @@
         <header>
             <nav>
                 <div id="logo">
-                    <img src="img/botbLogo1.png" alt="Battle of the Bands logo" height="125px">
+                    <img src="img/botbLogo1.png" alt="Battle of the Bands logo" height="125">
                 </div>
                 <ul id="mainMenu">
                     <li><a href="index.html" class="selected">About</a></li>
@@ -48,7 +48,7 @@
         </header>
         <main>
             <aside id="imgColumn">
-                <img class="img1" src="img/1.jpg">
+                <img class="img1" src="img/1.jpg" alt="image of performers on stage">
                 <img class="img2" src="img/2.jpg" alt="image of main stage by Yvette de Wit">
                 <img class="img3" src="img/3.jpg" alt="image of finishing perfomance by Spencer Davis">
                 <img class="img4" src="img/4.jpg" alt="image of band perdforming on stage by Matthew Kalapuch">
@@ -85,11 +85,11 @@
                 <section id="sponsors">
                     <h2>Sponsored By</h2>
                     <div id="sponOne">
-                        <img src="img/mesa.png" width="300px">
-                        <img src="img/likwid.png">
+                        <img src="img/mesa.png" width="300" alt="city of Mesa logo">
+                        <img src="img/likwid.png" alt="Likwid logo">
                     </div>
                     <div id="sponTwo">
-                        <img src="img/rock.png">
+                        <img src="img/rock.png" alt="RockGuitar logo">
                     </div>
                 </section>
                 <div id="dialog" >
@@ -208,22 +208,23 @@
                 <small>Battle of the Bands - Copyright 2023</small>
             </section>
         </footer>
+        <script>
+            (function () {
+                $('.hamburger-menu').on('click', function() {
+                    $('.bar').toggleClass('animate');
+                var mobileNav = $('.mobile-nav');
+                var svg = $('.hamburger-menu svg')
+                mobileNav.toggleClass('hide show');
+                })
+            })();
+    
+            $(function() {
+                $('#tickets').on('click', function() {
+                    $( "#dialog" ).dialog();
+                    $( "#dialog" ).css("display", "block")
+                })
+            });
+        </script>
     </body>
-    <script>
-        (function () {
-            $('.hamburger-menu').on('click', function() {
-                $('.bar').toggleClass('animate');
-            var mobileNav = $('.mobile-nav');
-            var svg = $('.hamburger-menu svg')
-            mobileNav.toggleClass('hide show');
-            })
-        })();
-
-        $(function() {
-            $('#tickets').on('click', function() {
-                $( "#dialog" ).dialog();
-                $( "#dialog" ).css("display", "block")
-            })
-        });
-    </script>
+    
 </html>

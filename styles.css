@@ -269,7 +269,7 @@ input.error  {
     main{
         display: flex;
         height: 100%;
-        padding-bottom: 5rem;
+        /* padding-bottom: 5rem; */
     }
 
     h1{
@@ -305,7 +305,7 @@ input.error  {
         "img5"; 
         justify-items: center; 
         overflow-x: hidden;
-        height: 145vh;
+        height: 140vh;
     }
     
     #imgColumn img{
@@ -976,6 +976,7 @@ input.error  {
 
     .mobile{
         display: flex;
+        flex: 20%;
         justify-content: center;
     }
     

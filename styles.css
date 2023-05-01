@@ -4,6 +4,7 @@
 */
 @import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Bruno+Ace&family=Darumadrop+One&family=Foldit&family=Playfair+Display:wght@600&family=Vina+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&family=Dhurjati&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Permanent+Marker&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -179,15 +180,24 @@ input.error  {
 
 #twelveSeconds{
     font-family: 'Vina Sans';
-    
 }
 
 #neuTree{
-    font-family: 'Foldit';
+    font-family: 'Bruno Ace';
+    font-style: italic;
+    font-weight: bold;
 }
 
 #theFaces{
     font-family: 'Darumadrop One';
+}
+
+#jillMatt{
+    font-family: 'Permanent Marker', cursive;
+}
+
+#bandBlue{
+    font-family: 'Foldit';
 } */
 
 @media (min-width: 900px){
@@ -337,9 +347,12 @@ input.error  {
     }
 
     #lineUp p{
-        font-size: 3em;
+        font-size: 4.5em;
         color: #ffffff;
+        padding: 0.01em;
+        font-family: 'Dhurjati', sans-serif;
     }
+    
 
     .day1 {
         display: grid; 
@@ -847,8 +860,9 @@ input.error  {
     }
 
     #lineUp p{
-        font-size: 2em;
+        font-size: 2.5em;
         color: #ffffff;
+        font-family: 'Dhurjati', sans-serif;
     }
 
     #info{

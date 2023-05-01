@@ -327,7 +327,6 @@ input.error  {
     .img2 { grid-area: img2; }
     .img3 { grid-area: img3; }
     .img4 { grid-area: img4; }
-
     #lineUp{
         display: grid; 
         margin: auto;
@@ -342,7 +341,7 @@ input.error  {
 
     #lineUp h3{
         font-family: 'Dhurjati', sans-serif;
-        font-size: 4em;
+        font-size: 4.5em;
         color: var(--gold);
     }
 

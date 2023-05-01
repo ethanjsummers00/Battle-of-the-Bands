@@ -8,6 +8,7 @@
         <link href="styles.css" rel="stylesheet" >
         <link href='https://fonts.googleapis.com/css?family=Dhurjati' rel='stylesheet'>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="scripts.js"></script>
     </head>
     <body>
         <header>
@@ -15,7 +16,7 @@
                 <div id="logo">
                     <img src="img/botbLogo1.png" alt="Battle of the Bands logo" height="125">
                 </div>
-                <ul>
+                <ul id="mainMenu">
                     <li><a href="index.html">About</a></li>
                     <li><a href="featured.html" class="selected">Featured</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -23,13 +24,24 @@
                 <div id="tickets">
                     <p>Get Tickets</p>
                 </div>
-                <div id="menuBtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                    <line x1="4" y1="6" x2="20" y2="6" />
-                    <line x1="4" y1="12" x2="20" y2="12" />
-                    <line x1="4" y1="18" x2="20" y2="18" />
-                    </svg>
+                <div class="mobile">
+                    <div class="hamburger-menu">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <line x1="4" y1="6" x2="20" y2="6" />
+                            <line x1="4" y1="12" x2="20" y2="12" />
+                            <line x1="4" y1="18" x2="20" y2="18" />
+                        </svg>
+                    </div>
+                </div>  
+                
+
+                <div class="mobile-nav hide">
+                    <ul>
+                    <li><a href="index.html" >About</a></li>
+                    <li><a href="featured.html" class="selected">Featured</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
             </nav>
         </header>
@@ -44,10 +56,10 @@
                         <div class="slide">
                             <img src="img/artist2.png" alt="portrait of the band Killing Sand">
                         </div>
-                        <div class="slide">
+                        <div class="slide" style="display: none;">
                             <img src="img/artist1.png" alt="image of the Faces">
                         </div>
-                        <div class="slide">
+                        <div class="slide" style="display: none;">
                             <img src="img/artist3.png" alt="portrait of the band 12 Seconds">
                         </div>
                     </div>
@@ -186,7 +198,6 @@
                 <small>Battle of the Bands - Copyright 2023</small>
             </section>
         </footer>
-        <script src="scripts.js"></script>
         <script>
             (function () {
                 $('.hamburger-menu').on('click', function() {

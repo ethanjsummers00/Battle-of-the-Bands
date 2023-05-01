@@ -2,6 +2,8 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url('https://fonts.googleapis.com/css2?family=Braah+One&family=Bruno+Ace&family=Darumadrop+One&family=Foldit&family=Playfair+Display:wght@600&family=Vina+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&family=Dhurjati&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -49,7 +51,6 @@ table {
 
 /*Global*/
 
-@import url('https://fonts.googleapis.com/css2?family=Arimo:ital@0;1&family=Dhurjati&display=swap');
 
 :root {
     --black: #0c0c0c;
@@ -171,6 +172,23 @@ input[type=submit]:hover {
 input.error  {
     border: 2px solid red;
 }
+
+/* #killingSand{
+    font-family: 'Bruno Ace';
+}
+
+#twelveSeconds{
+    font-family: 'Vina Sans';
+    
+}
+
+#neuTree{
+    font-family: 'Foldit';
+}
+
+#theFaces{
+    font-family: 'Darumadrop One';
+} */
 
 @media (min-width: 900px){
 
@@ -406,9 +424,12 @@ input.error  {
 
     footer svg:hover{
         cursor: pointer;
-        stroke: var(--gold);
+        transition: 0.5s;
+    }
+
+    footer svg:hover path{
         fill: var(--gold);
-        transform: 0.5s;
+        transition: 0.5s;
     }
 
     #sponsors{
@@ -720,9 +741,17 @@ input.error  {
         opacity:0;
         left:100%;
       }
+
+      .showMen {
+        display: block;
+      }
+      
+      .hideMen {
+        display: none;
+      }
       
       .mobile-nav {
-        background:var(--mainGray);
+        background:rgba(37, 37, 37, 0.9);
         position:absolute;
         top:0;
         width:100vw;
@@ -803,7 +832,7 @@ input.error  {
         font-size: 3em;
         color: #ffffff;
         text-align: center;
-        
+        padding-bottom: 0.25em;
     }
 
     #lineUp{
@@ -845,6 +874,7 @@ input.error  {
     #info #location{
         margin: 1% auto 1% auto;
         background-image: url(img/vector1.png);
+        background-size: 100% auto;
         background-repeat: no-repeat;
         background-position: center;
         max-width: 80%;
@@ -878,8 +908,6 @@ input.error  {
 
     footer svg:hover{
         cursor: pointer;
-        stroke: var(--gold);
-        fill: var(--gold);
     }
 
     #footerLeft{
@@ -940,6 +968,10 @@ input.error  {
 
     #artistMobile{
         overflow-x: hidden;
+    }
+
+    .artistDesc{
+        display: none;
     }
 
     .mobile{

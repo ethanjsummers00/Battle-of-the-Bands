@@ -95,8 +95,11 @@ var slideIndex = 1;
         $('.hamburger-menu').on('click', function() {
             // $('.bar').toggleClass('animate');
         var mobileNav = $('.mobile-nav');
+        var open = $('.icon icon-tabler icon-tabler-menu-2');
+        // var exit = $('#exit');
         mobileNav.toggleClass('hide show');
-        
+        open.toggleClass('hideMen showMen');
+        // exit.toggleClass('hideMen showMen');
         })
     })();
 

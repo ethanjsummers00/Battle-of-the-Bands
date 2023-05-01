@@ -27,11 +27,16 @@
                 </div>
                 <div class="mobile">
                     <div class="hamburger-menu">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg id="open" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2 showMen" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                             <line x1="4" y1="6" x2="20" y2="6" />
                             <line x1="4" y1="12" x2="20" y2="12" />
                             <line x1="4" y1="18" x2="20" y2="18" />
+                        </svg>
+                        <svg id="exit" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x hideMen" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <line x1="18" y1="6" x2="6" y2="18" />
+                            <line x1="6" y1="6" x2="18" y2="18" />
                         </svg>
                     </div>
                 </div>  
@@ -48,11 +53,11 @@
         </header>
         <main>
             <aside id="imgColumn">
-                <img class="img1" src="img/1.jpg" alt="image of performers on stage">
-                <img class="img2" src="img/2.jpg" alt="image of main stage by Yvette de Wit">
-                <img class="img3" src="img/3.jpg" alt="image of finishing perfomance by Spencer Davis">
-                <img class="img4" src="img/4.jpg" alt="image of band perdforming on stage by Matthew Kalapuch">
-                <img class="img5" src="img/5.jpg" alt="image of band perdforming on stage by ActionVance">
+                <img class="img1" src="img/1.webp" alt="image of performers on stage">
+                <img class="img2" src="img/2.webp" alt="image of main stage by Yvette de Wit">
+                <img class="img3" src="img/3.webp" alt="image of finishing perfomance by Spencer Davis">
+                <img class="img4" src="img/4.webp" alt="image of band perdforming on stage by Matthew Kalapuch">
+                <img class="img5" src="img/5.webp" alt="image of band perdforming on stage by ActionVance">
             </aside>
             <section id="home">
                 <h1>Battle of the Bands <strong>2023</strong></h1>
@@ -61,15 +66,15 @@
                     <article class="day1">
                         <div class="date1"><h3>Saturday 2/25</h3></div>
                         <div>
-                            <p>Killing Sand</p>
-                            <p>12 Seconds</p>
-                            <p>Neu Tree</p>
+                            <p id="killingSand">Killing Sand</p>
+                            <p id="twelveSeconds">12 Seconds</p>
+                            <p id="neuTree">Neu Tree</p>
                         </div>
                     </article>
                     <article class="day2">
                         <div class="date2"><h3>Sunday 2/26</h3></div>
                         <div>
-                            <p>The Faces</p>
+                            <p id="theFaces">The Faces</p>
                             <p>Jill Matt</p>
                             <p>Band Blue</p>
                         </div>

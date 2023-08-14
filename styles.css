@@ -314,8 +314,8 @@ input.error  {
         "img4"
         "img5"; 
         justify-items: center; 
-        overflow-x: hidden;
-        height: 145vh;
+        overflow: hidden;
+        height: 175vh;
     }
     
     #imgColumn img{
